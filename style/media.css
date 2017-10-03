@@ -1,0 +1,36 @@
+@media(max-width: 800px){
+	header{
+		padding:.2rem 2rem;
+	}
+	.container h1,
+	.container p{
+	    padding-right: 1rem;
+	}
+	.container h1{
+	    font-size: 1.6rem;		
+	}
+	.container p{
+	    font-size: 1.4rem;	
+	}
+}
+
+@media(max-width: 470px){
+	.nav-button{
+	    font-size: 1rem;
+	    padding: 6px;	
+	}
+	.text-container {
+    	font-size: 1.3rem;
+	}
+}
+@media(max-width: 320px){
+	header{
+		padding:.2rem;
+	}
+	.container h1,
+	.container p{
+	    padding-right: .2rem;
+	}
+}
+
+
