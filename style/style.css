@@ -112,7 +112,7 @@ nav li{
 
 /**pages-index**/
 .pages-index{
-    position: relative;
+    position: fixed;
     bottom: 1rem;
     left: 0;
     right: 0;
@@ -162,9 +162,11 @@ nav li{
     margin: 0 auto;
     margin-top: 3rem;
     max-width: 95%;
+/*    max-height: 53vh;
+    overflow-x: auto;*/
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
 }
 .container h1,
 .container p{
@@ -200,11 +202,12 @@ nav li{
 .gift-container button img{
     vertical-align: middle;
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
 }
 .summary-img{
-	max-width: 500px;
-	margin: 0 auto;
+    max-height: 300px;
+    margin: 0 auto;
+    max-width: 100%;
 }
 .disabeldBtn{
 	opacity:.3;

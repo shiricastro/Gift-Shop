@@ -9,8 +9,9 @@
 	.container h1{
 	    font-size: 1.6rem;		
 	}
-	.container p{
-	    font-size: 1.4rem;	
+	.container p {
+	    font-size: 1.4rem;
+	    margin-top: .9rem;
 	}
 }
 
@@ -22,6 +23,18 @@
 	.text-container {
     	font-size: 1.3rem;
 	}
+	.container{
+		margin-top: 1rem;
+	}
+	.summary-img {
+	    max-height: 200px;
+	}
+}
+@media(max-width: 414px){
+	.gift-container {
+	    max-height: 46vh;
+	    overflow-x: auto;
+	}
 }
 @media(max-width: 320px){
 	header{
@@ -31,6 +44,28 @@
 	.container p{
 	    padding-right: .2rem;
 	}
+	.container p{
+	    margin-top:0;
+	    margin-bottom: 0;
+	}
+	.login-page > span {
+	    font-size: 3rem;;
+	}
+	.gift-container {
+	    max-height: 39vh;
+	    overflow-x: auto;
+	    margin-top: 1rem;
+	}
+	.summary-img {
+	    max-height: 180px;
+	}
 }
 
-
+@media (width:360px) and (height:640px){
+	.summary-img {
+    	max-height: 230px;
+	}
+	.gift-container {
+	    max-height: 44vh;
+	}
+}
