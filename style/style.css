@@ -55,9 +55,9 @@ body{
 }
 
 /***main-container***/
-/*.main-container{
+.main-container{
 	display: none;
-}*/
+}
 button{
 	font-family: inherit;
 	cursor: pointer;

@@ -1,7 +1,7 @@
-// $('.login-page').on('click',function(){
-// 	$(this).css({display:'none'});
-// 	$('.main-container').css({display:'block'});
-// });
+$('.login-page').on('click',function(){
+	$(this).css({display:'none'});
+	$('.main-container').css({display:'block'});
+});
 
 var dataVal = {
 	entry:{content:`<h1>מבוא</h1>
