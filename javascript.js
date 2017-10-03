@@ -1,8 +1,4 @@
-$('.login-page').on('click',function(){
-	$(this).css({display:'none'});
-	$('.main-container').css({display:'block'});
-});
-
+//obj of pages
 var dataVal = {
 	entry:{content:`<h1>מבוא</h1>
 		   <p class="text-container">ברוכים הבאים לחנות המתנות,</br> כאן תלמד כיצד לקנות מתנות שוות.</p>`,
@@ -16,28 +12,42 @@ var dataVal = {
 			</div>`,
 			index:`2`},
 	summary:{content:`<div class="summery-container">
+				<img class="circle-Background1" src="image/circleBack1.png" alt="image"/>
+				<img class="circle-Background2" src="image/circleBack2.png" alt="image"/>
 				<div class="summery-wrap">
 					<h1>סיכום</h1>
 					<p class="text-container">תודה שהשתתפת בחנות המתנות! </br> עכשיו אתה מוכן לקנות מתנות שוות.</p>
 				</div>	
-				<img class="summary-img" src="" alt="image"/>
+				<div class="img-container">
+					<img class="summary-img" src="" alt="image"/>
+				</div>
 			</div>`,
 			index:`3`}
 }
 
+//login page
+$('.login-button').on('click',function(){
+	$('.login-page').css({display:'none'});
+	$('.main-container').fadeIn('slow');
+});
+
+//global var
 var container = $('.container');
 var pageNumber = $('.page-number');
 var dataSize = Object.keys(dataVal).length;
 var selectGift = 'image/GiftBox.png';
 
+//show entry contant
 addContainer('entry');
 
+//button click events 
 $('.nav-button').on('click',(e) => {
 	addContainer($(e.target).attr('data-name'));
 	navActive($(e.target));
 });
 $('.pages-botton').on('click',(e) => findDataName($(e.target).attr('next-index')));
 
+//functions
 function selectImg(){
 	$('.gift-container button').on('click',(e) => {
 		selectGift = $(e.target).attr('src');
@@ -46,14 +56,15 @@ function selectImg(){
 
 function addContainer(dataName){
 	var data = dataVal[dataName];
+	$(container).css({"display":"none"}).fadeIn('slow');
 	$(container).html(data.content);
 	$(pageNumber).html(`${dataSize} / ${data.index}`);
 	pagesNumber(data.index);
 }
 
-function findDataName(ind){
+function findDataName(index){
 	var dataName = jQuery.map(dataVal, function(obj,key) {
-	    if(obj.index === ind)
+	    if(obj.index === index)
 	         return key; 
 	})[0];
 	addContainer(dataName);
@@ -79,7 +90,7 @@ function pagesNumber(index){
 	}else if(nextNum === 3){
 		selectImg();
 	}else if(nextNum > dataSize){
-		$($('.summary-img')[0]).attr('src',selectGift);	
+		$($('.summary-img')[0]).attr('src',selectGift);
 		$(nextBtn).attr("disabled",true).addClass("disabeldBtn");
 	}
 }
