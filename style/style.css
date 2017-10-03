@@ -112,14 +112,15 @@ nav li{
 
 /**pages-index**/
 .pages-index{
-    position: fixed;
-    bottom: 1rem;
+	position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 3rem;
+    padding: 1rem;
+    background-color: white;
 }
 .pages-wrap{
 	position: relative;
@@ -162,8 +163,6 @@ nav li{
     margin: 0 auto;
     margin-top: 3rem;
     max-width: 95%;
-/*    max-height: 53vh;
-    overflow-x: auto;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -179,6 +178,7 @@ nav li{
 }
 .text-container{
 	font-size: 1.5rem;
+	margin-top: 0;
 }
 .gift-container{
 	display: flex;
